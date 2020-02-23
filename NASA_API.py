@@ -5,7 +5,7 @@ import urllib.request
 import csv
 
 
-response = requests.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-02-02&api_key=cT2Zapk1WaCGLDtMPb3hryVaYj0WqrFPxEQgq5CU")
+response = requests.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-02-02&api_key=DEMO_KEY")
 
 print(response.status_code)
 
@@ -29,7 +29,7 @@ def MetaCSV():
 
 
 def dwnldImg():
-    response = requests.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-02-02&api_key=cT2Zapk1WaCGLDtMPb3hryVaYj0WqrFPxEQgq5CU")
+    response = requests.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2016-02-02&api_key=DEMO_KEY")
     source = response.json()['photos']
     for item in source:
         source = item['img_src']
